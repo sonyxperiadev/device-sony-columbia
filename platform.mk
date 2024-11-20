@@ -153,8 +153,7 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/audio_policy_configuration.xml \
     $(SONY_ROOT)/vendor/etc/bluetooth_qti_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/bluetooth_qti_audio_policy_configuration.xml \
     $(SONY_ROOT)/vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/bluetooth_qti_hearing_aid_audio_policy_configuration.xml\
-    $(SONY_ROOT)/vendor/etc/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/media_codecs_vendor_audio.xml \
-    $(SONY_ROOT)/vendor/etc/mixer_paths_parrot_qrd_sku1.xml:$(TARGET_COPY_OUT_VENDOR)/mixer_paths_parrot_qrd_sku1.xml
+    $(SONY_ROOT)/vendor/etc/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/media_codecs_vendor_audio.xml
 
 # Media
 PRODUCT_COPY_FILES += \
