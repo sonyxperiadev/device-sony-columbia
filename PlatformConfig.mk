@@ -82,7 +82,7 @@ BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 
 # https://source.android.com/devices/bootloader/partitions/vendor-boot-partitions#build-support
 # >= 3 is required for (and turns on) PRODUCT_BUILD_VENDOR_BOOT_IMAGE
-BOARD_BOOT_HEADER_VERSION := 3
+BOARD_BOOT_HEADER_VERSION := 4
 BOARD_RAMDISK_USE_LZ4 := true
 # AOSP does not propagate the header version
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
