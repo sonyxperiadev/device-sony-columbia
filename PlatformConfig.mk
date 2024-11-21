@@ -27,7 +27,6 @@ BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 
-BOARD_KERNEL_CMDLINE += androidboot.bootdevice=4804000.ufshc
 BOARD_KERNEL_CMDLINE += swiotlb=2048
 BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += console=null
@@ -72,17 +71,19 @@ BOARD_AVB_VBMETA_SYSTEM_ALGORITHM ?= SHA256_RSA2048
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
-TARGET_NO_RECOVERY := true
-
-# https://source.android.com/devices/bootloader/partitions/generic-boot#combinations, "Launch device without recovery partition":
+# https://source.android.com/devices/bootloader/partitions/generic-boot#combinations, "Launch device with A/B recovery partition":
 BOARD_USES_RECOVERY_AS_BOOT :=
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
-BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
+BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT :=
 BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600
+BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
+BOARD_COPY_BOOT_IMAGE_TO_TARGET_FILES :=
+BOARD_USES_FULL_RECOVERY_IMAGE := true
 
 # https://source.android.com/devices/bootloader/partitions/vendor-boot-partitions#build-support
 # >= 3 is required for (and turns on) PRODUCT_BUILD_VENDOR_BOOT_IMAGE
-BOARD_BOOT_HEADER_VERSION := 3
+BOARD_BOOT_HEADER_VERSION := 4
 BOARD_RAMDISK_USE_LZ4 := true
 # AOSP does not propagate the header version
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)

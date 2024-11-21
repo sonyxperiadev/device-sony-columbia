@@ -125,12 +125,22 @@ AB_OTA_PARTITIONS += \
     boot \
     dtbo \
     product \
+    recovery \
     system \
     system_ext \
     vbmeta \
     vbmeta_system \
     vendor \
     vendor_boot
+
+PRODUCT_PACKAGES += \
+    linker.vendor_ramdisk \
+    tune2fs.vendor_ramdisk \
+    resize2fs.vendor_ramdisk
+
+PRODUCT_PACKAGES += \
+    shell_and_utilities_vendor_ramdisk \
+    adbd.vendor_ramdisk
 
 # Dynamic Partitions: build fastbootd
 PRODUCT_PACKAGES += \
@@ -153,8 +163,7 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/audio_policy_configuration.xml \
     $(SONY_ROOT)/vendor/etc/bluetooth_qti_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/bluetooth_qti_audio_policy_configuration.xml \
     $(SONY_ROOT)/vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/bluetooth_qti_hearing_aid_audio_policy_configuration.xml\
-    $(SONY_ROOT)/vendor/etc/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/media_codecs_vendor_audio.xml \
-    $(SONY_ROOT)/vendor/etc/mixer_paths_parrot_qrd_sku1.xml:$(TARGET_COPY_OUT_VENDOR)/mixer_paths_parrot_qrd_sku1.xml
+    $(SONY_ROOT)/vendor/etc/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/media_codecs_vendor_audio.xml
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -183,11 +192,6 @@ PRODUCT_COPY_FILES += \
 # NFC Configuration
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
-
-# FPC Gestures
-PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/vendor/usr/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-fpc.idc \
-    $(SONY_ROOT)/vendor/usr/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl
 
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
@@ -480,3 +484,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product, device/sony/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
