@@ -34,6 +34,8 @@ BOARD_KERNEL_CMDLINE += console=null
 # Serial console
 #BOARD_KERNEL_CMDLINE += earlycon=msm_geni_serial,0x4c8c000
 
+BOARD_BOOTCONFIG += androidboot.usbcontroller=a600000.dwc3
+
 TARGET_RECOVERY_WIPE := $(PLATFORM_COMMON_PATH)/rootdir/recovery.wipe
 TARGET_RECOVERY_FSTAB ?= $(PLATFORM_COMMON_PATH)/rootdir/vendor/etc/fstab.columbia
 
