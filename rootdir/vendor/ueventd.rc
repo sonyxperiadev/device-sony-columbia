@@ -1,9 +1,19 @@
 firmware_directories /vendor/firmware_mnt/image/
 
+subsystem dma_heap
+    devname uevent_devpath
+    dirname /dev/dma_heap
+
+subsystem mem_buf_vm
+    devname uevent_devpath
+    dirname /dev/mem_buf_vm
+
 /dev/genlock              0666   system     system
 /dev/wlan                 0660   wifi       wifi
 /dev/kgsl-3d0             0666   system     system
-/dev/ion                  0664   system     system
+/dev/membuf               0664   system     system
+/dev/mem_buf_vm/*         0444   system     system
+/dev/dma_heap/qcom,*      0664   system     system
 /dev/rtc0                 0660   system     system
 /dev/smd0                 0660   system     system
 /dev/smd3                 0660   bluetooth  bluetooth
