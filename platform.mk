@@ -162,23 +162,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(SONY_ROOT)/vendor/etc/bluetooth_qti_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_audio_policy_configuration.xml \
-    $(SONY_ROOT)/vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml\
-    $(SONY_ROOT)/vendor/etc/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml
+    $(SONY_ROOT)/vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/vendor/etc/media_codecs_parrot_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_parrot_v0.xml \
     $(SONY_ROOT)/vendor/etc/media_codecs_parrot_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_parrot_v1.xml \
-    $(SONY_ROOT)/vendor/etc/media_codecs_parrot_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_parrot_v2.xml \
-    $(SONY_ROOT)/vendor/etc/media_codecs_performance_parrot_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_parrot_v0.xml \
     $(SONY_ROOT)/vendor/etc/media_codecs_performance_parrot_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_parrot_v1.xml \
-    $(SONY_ROOT)/vendor/etc/media_codecs_performance_parrot_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_parrot_v2.xml \
-    $(SONY_ROOT)/vendor/etc/media_parrot_v0/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_parrot_v0/video_system_specs.json \
+    $(SONY_ROOT)/vendor/etc/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml \
     $(SONY_ROOT)/vendor/etc/media_parrot_v1/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_parrot_v1/video_system_specs.json \
-    $(SONY_ROOT)/vendor/etc/media_parrot_v2/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_parrot_v2/video_system_specs.json \
-    $(SONY_ROOT)/vendor/etc/media_profiles_parrot_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_parrot_v0.xml \
-    $(SONY_ROOT)/vendor/etc/media_profiles_parrot_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_parrot_v1.xml \
-    $(SONY_ROOT)/vendor/etc/media_profiles_parrot_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_parrot_v2.xml
+    $(SONY_ROOT)/vendor/etc/media_profiles_parrot_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_parrot_v1.xml
 
 # Qualcom WiFi Overlay
 PRODUCT_COPY_FILES += \
@@ -506,6 +498,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=1
+
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.media.xml_variant.codecs=_parrot_v1 \
+    ro.media.xml_variant.codecs_performance=_parrot_v1 \
+    vendor.mm.enable.qcom_parser=1040463
 
 $(call inherit-product, device/sony/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
