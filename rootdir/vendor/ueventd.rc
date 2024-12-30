@@ -142,6 +142,11 @@ subsystem mem_buf_vm
 /dev/wcd-dsp-glink        0660   system     audio
 /sys/devices/virtual/smdpkt/smdcntl* open_timeout 0664 radio  radio
 
+# audio
+/dev/aud_pasthru_adsp     0660   system     audio
+/dev/msm_audio_ion        0660   system     audio
+/dev/msm_audio_ion_cma    0660   system     audio
+
 # sensors
 /sys/devices/virtual/input/input*        poll           0660    input    system
 /sys/devices/virtual/input/input*        pollrate_ms    0660    input    system
