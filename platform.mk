@@ -356,7 +356,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.battery_listener.enable=true \
     vendor.audio.feature.hfp.enable=true \
     vendor.audio.feature.kpi_optimize.enable=true \
-    vendor.audio.feature.dmabuf.cma.memory.enable=false \
+    vendor.audio.feature.dmabuf.cma.memory.enable=true \
     vendor.audio.hdr.record.enable=false
 
 # USB controller setup
