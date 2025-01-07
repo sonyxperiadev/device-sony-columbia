@@ -47,6 +47,10 @@ on init
 on boot
     # WLAN MAC
     chown wifi wifi /sys/module/wlan/parameters/fwpath
+
+    # Bring WPSS out of reset
+    write /sys/kernel/icnss/wpss_boot 1
+
     # Trigger WLAN driver load
     write /sys/kernel/boot_wlan/boot_wlan 1
 
