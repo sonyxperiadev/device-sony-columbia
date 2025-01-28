@@ -247,7 +247,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors init
 PRODUCT_PACKAGES += \
-    sdsp-sensorspdr.rc
+    adsp-sensorspdr.rc
 
 # SSC Common config
 PRODUCT_PACKAGES += \
