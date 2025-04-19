@@ -431,8 +431,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.media.xml_variant.codecs=_parrot_v1 \
-    ro.media.xml_variant.codecs_performance=_parrot_v1 \
+    vendor.media.target_variant=_parrot_v1 \
     vendor.mm.enable.qcom_parser=1040463
 
 $(call inherit-product, device/sony/common/common.mk)
