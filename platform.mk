@@ -224,6 +224,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    vendor.qti.camera.provider@2.7-service_64.rc
 
 # GFX
 PRODUCT_PACKAGES += \
