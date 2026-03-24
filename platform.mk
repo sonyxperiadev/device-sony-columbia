@@ -167,10 +167,6 @@ PRODUCT_PACKAGES += \
     init.columbia.pwr \
     ueventd
 
-# Audio init
-PRODUCT_PACKAGES += \
-    audiopd.rc
-
 # Audio
 PRODUCT_PACKAGES += \
     sound_trigger.primary.sm6450 \
