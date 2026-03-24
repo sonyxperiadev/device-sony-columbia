@@ -104,11 +104,6 @@ TARGET_USES_SDE := true
 # Platform has been launched on Android 14 (API level 34)
 PRODUCT_SHIPPING_API_LEVEL := 34
 
-# Treble
-# Include vndk/vndk-sp/ll-ndk modules
-PRODUCT_PACKAGES += \
-    vndk_package
-
 # Device Specific Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.gyroscope.xml \
