@@ -383,6 +383,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.media.target_variant=_parrot_v1 \
     vendor.mm.enable.qcom_parser=1040463
 
+# DSP charger
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.dsp.charger=1
+
 $(call inherit-product, device/sony/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
