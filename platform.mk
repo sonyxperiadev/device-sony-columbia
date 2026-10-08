@@ -102,6 +102,10 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/resourcemanager_parrot_qrd_sku1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/resourcemanager_parrot_qrd_sku1.xml \
     $(SONY_ROOT)/vendor/etc/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml
 
+# Display
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/vendor/etc/display/DPU830.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU830.xml
+
 # Media
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/media_codecs_parrot_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_parrot_v1.xml \
