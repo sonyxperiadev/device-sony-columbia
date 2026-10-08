@@ -157,13 +157,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.camera.provider@2.7-service_64.rc
 
-# GFX
-PRODUCT_PACKAGES += \
-    copybit.sm6450 \
-    gralloc.sm6450 \
-    hwcomposer.sm6450 \
-    memtrack.default
-
 # HVDCP init
 PRODUCT_PACKAGES += \
     hvdcp_opti.rc
@@ -186,10 +179,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 DEVICE_MANIFEST_FILE += \
     $(PLATFORM_COMMON_PATH)/vintf/android.hardware.security.keymint-service-qti.xml \
     $(PLATFORM_COMMON_PATH)/vintf/vendor.qti.hardware.qseecom_v1.0.xml
-
-# GPS
-PRODUCT_PACKAGES += \
-    gps.sm6450
 
 # Sensors init
 PRODUCT_PACKAGES += \
