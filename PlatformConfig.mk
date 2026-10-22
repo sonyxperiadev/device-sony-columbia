@@ -17,11 +17,6 @@ TARGET_CPU_ABI := arm64-v8a
 # Switch to Cortex-A78 when it becomes available!
 TARGET_CPU_VARIANT_RUNTIME := generic
 
-TARGET_2ND_ARCH_VARIANT := armv8-a
-TARGET_2ND_CPU_ABI := armeabi-v7a
-# Switch to Cortex-A55 when it becomes available!
-TARGET_2ND_CPU_VARIANT_RUNTIME := generic
-
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
