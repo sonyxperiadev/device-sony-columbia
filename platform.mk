@@ -98,11 +98,14 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/vendor/etc/audio_module_config_primary.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_module_config_primary.xml \
     $(SONY_ROOT)/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(SONY_ROOT)/vendor/etc/card-defs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/card-defs.xml \
-    $(SONY_ROOT)/vendor/etc/resourcemanager_parrot_qrd_sku1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/resourcemanager_parrot_qrd_sku1.xml \
-    $(SONY_ROOT)/vendor/etc/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml
+    $(SONY_ROOT)/vendor/etc/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml \
+    $(SONY_ROOT)/vendor/etc/audio/sku_parrot/audio_effects_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/audio_effects_config.xml \
+    $(SONY_ROOT)/vendor/etc/audio/sku_parrot/audio_module_config_primary.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/audio_module_config_primary.xml \
+    $(SONY_ROOT)/vendor/etc/audio/sku_parrot/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/audio_policy_configuration.xml \
+    $(SONY_ROOT)/vendor/etc/audio/sku_parrot/resourcemanager_parrot_qrd_sku1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/resourcemanager_parrot_qrd_sku1.xml \
+    $(SONY_ROOT)/vendor/etc/audio/sku_parrot/vendor_audio_interfaces.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/vendor_audio_interfaces.xml
 
 # Display
 PRODUCT_COPY_FILES += \
