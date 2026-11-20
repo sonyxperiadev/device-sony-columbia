@@ -113,10 +113,18 @@ PRODUCT_COPY_FILES += \
 
 # Media
 PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/vendor/etc/media_codecs_parrot_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_parrot_v0.xml \
     $(SONY_ROOT)/vendor/etc/media_codecs_parrot_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_parrot_v1.xml \
+    $(SONY_ROOT)/vendor/etc/media_codecs_parrot_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_parrot_v2.xml \
+    $(SONY_ROOT)/vendor/etc/media_codecs_performance_parrot_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_parrot_v0.xml \
     $(SONY_ROOT)/vendor/etc/media_codecs_performance_parrot_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_parrot_v1.xml \
+    $(SONY_ROOT)/vendor/etc/media_codecs_performance_parrot_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_parrot_v2.xml \
+    $(SONY_ROOT)/vendor/etc/media_profiles_parrot_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_parrot_v0.xml \
+    $(SONY_ROOT)/vendor/etc/media_profiles_parrot_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_parrot_v1.xml \
+    $(SONY_ROOT)/vendor/etc/media_profiles_parrot_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_parrot_v2.xml \
+    $(SONY_ROOT)/vendor/etc/media_parrot_v0/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_parrot_v0/video_system_specs.json \
     $(SONY_ROOT)/vendor/etc/media_parrot_v1/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_parrot_v1/video_system_specs.json \
-    $(SONY_ROOT)/vendor/etc/media_profiles_parrot_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_parrot_v1.xml
+    $(SONY_ROOT)/vendor/etc/media_parrot_v2/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_parrot_v2/video_system_specs.json
 
 # Qualcom WiFi Overlay
 PRODUCT_COPY_FILES += \
@@ -391,7 +399,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Media
 PRODUCT_VENDOR_PROPERTIES += \
-    vendor.media.target_variant=_parrot_v1 \
     vendor.mm.enable.qcom_parser=1040463
 
 # DSP charger

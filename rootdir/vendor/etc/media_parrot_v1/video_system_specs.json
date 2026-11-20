@@ -115,12 +115,6 @@
             // Frameworks adds 4 buffers to achive smoothness for all resolutions. To reduce memory usage
             // for higher resolutions(> 4k) reduce the output delay by smoothnessFactor.
             "smoothnessFactor": 4,
-            // set cpu affinity to bind to special core for all video threads
-            // 1 1 1 1 <big core> 1 1 1 1 <small core>
-            // 0 means don't set special affinity
-            "cpuaffinity_set": 0,
-            // this gives number of CPU information on target
-            "cpu_count": 8,
             // override default primaries to BT709 for >=UHD decode
             "default_primaries_override" : 0,
 
