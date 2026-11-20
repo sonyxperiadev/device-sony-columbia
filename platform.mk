@@ -399,7 +399,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Media
 PRODUCT_VENDOR_PROPERTIES += \
-    vendor.media.target_variant=_parrot_v1 \
     vendor.mm.enable.qcom_parser=1040463
 
 # DSP charger
